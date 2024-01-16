@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+/* Styles for Ahabanza Section */
+#ahabanza {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Styles for Imisanzu Section */
+#imisanzu {
+    background-color: #e6f7ff;
+    padding: 20px;
+}
+
+/* Styles for Sekeretariya Section */
+.sekeretariya {
+    background-color: #ffe6cc;
+    padding: 20px;
+}
+
+/* Styles for Abaterankunga Section */
+.abaterankunga {
+    background-color: #f0d6e1;
+    padding: 20px;
+}
+
+/* Add more specific styles for each section as needed */

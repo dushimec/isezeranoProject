@@ -1,0 +1,59 @@
+import mongoose, { model } from "mongoose";
+const { Schema } = mongoose;
+
+const UmusanzuSchema = new Schema({
+names:{
+  type:String,
+  required:true
+},
+ukwezi_1:{
+  type:String,
+  required:true
+},
+ukwezi_2:{
+  type:Number,
+  required:true
+},
+ukwezi_3:{
+  type:Number,
+  required:true
+},
+ukwezi_4:{
+  type:String,
+  required:true
+},
+ukwezi_5:{
+  type:String,
+  required:true
+},
+ukwezi_6:{
+  type:String,
+  required:true
+},
+ukwezi_7:{
+  type:String,
+  required:true
+},
+ukwezi_8:{
+  type:String,
+  required:true
+},
+ukwezi_9:{
+  type:String,
+  required:true
+},
+ukwezi_10:{
+  type:String,
+  required:true
+},
+ukwezi_11:{
+  type:String,
+  required:true
+},
+ukwezi_12:{
+  type:String,
+  required:true
+},
+},
+{timestamps:true});
+export default model("Umusanzu", UmusanzuSchema)
