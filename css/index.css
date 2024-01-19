@@ -13,10 +13,18 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: right;
 }
 
-nav li {
+nav .li {
     margin-right: 20px;
+    list-style-type: none;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+    
+    
 }
 
 section {
@@ -45,6 +53,14 @@ section {
 .abaterankunga {
     background-color: #f0d6e1;
     padding: 20px;
+}
+
+nav .logo{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    justify-content: left;
 }
 
 /* Add more specific styles for each section as needed */

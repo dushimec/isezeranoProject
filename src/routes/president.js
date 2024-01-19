@@ -2,10 +2,13 @@ import { Router } from 'express';
 const adminRoutes = Router();
 import Nyobozi from "../models/nyobozi.js";
 import Abaterankunga from '../models/abaterankunga.js';
+import {verifyTokenAndAdmin,verifyToken,verifyTokenAndAuthorization} from '../routes/verifyToken.js'
 
 
-adminRoutes.post('/gushyiraho', async (req, res) => {
+
+  adminRoutes.post('/gushyiraho',verifyTokenAndAdmin, async (req, res) => {
   try {
+    
     if (req.body.titel) {
       const newLeader = new Nyobozi({
         firstname: req.body.firstname,
@@ -34,7 +37,7 @@ adminRoutes.post('/gushyiraho', async (req, res) => {
   }
 });
 
-adminRoutes.get('/',async (req,res) =>{
+adminRoutes.get('/',verifyTokenAndAdmin, async (req,res) =>{
  const kureba = await Nyobozi.find()
  if (kureba) {
   res.status(200).json(kureba)
@@ -44,7 +47,7 @@ adminRoutes.get('/',async (req,res) =>{
  }
 })
 
-adminRoutes.delete('/gusiba/:id',async (req,res) =>{
+adminRoutes.delete('/gusiba/:id',verifyTokenAndAdmin, async (req,res) =>{
   
  const gusiba = await Nyobozi.findByIdAndRemove(req.params.id)
  if (gusiba) {
@@ -57,7 +60,7 @@ adminRoutes.delete('/gusiba/:id',async (req,res) =>{
  })
 
  //Abaterankunga
- adminRoutes.get('/abaterankunga',async (req,res) =>{
+ adminRoutes.get('/abaterankunga',verifyTokenAndAdmin, async (req,res) =>{
   const kureba = await Abaterankunga.find()
   if (kureba) {
    res.status(200).json(kureba)
